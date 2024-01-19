@@ -1,15 +1,16 @@
 function minDate(dates) {
-  //write you code here
-	let ans;
-	let earliest = Date.now()
-	date.forEach((date) => {
-		let dateInSec = new Date(`${date}T00:00:00`)
-		if(dateInSec < earliest) {
-			earliest = dateInSec
-			ans = date
-		}
-	})
-	return ans
+    let ans;
+    let earliest = Date.now();
+
+    dates.forEach((date) => {
+        let dateInSec = new Date(`${date}T00:00:00`).getTime();
+        if (dateInSec < earliest) {
+            earliest = dateInSec;
+            ans = date;
+        }
+    });
+
+    return ans;
 }
 
 // Do not change the code
