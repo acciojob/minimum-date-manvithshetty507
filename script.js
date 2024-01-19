@@ -1,5 +1,15 @@
 function minDate(dates) {
   //write you code here
+	let ans;
+	let earliest = Date.now()
+	date.forEach((date) => {
+		let dateInSec = new Date(`${date}T00:00:00`)
+		if(dateInSec < earliest) {
+			earliest = dateInSec
+			ans = date
+		}
+	})
+	return ans
 }
 
 // Do not change the code
@@ -37,4 +47,7 @@ var dates = [
   "2023/03/30",
 ];
 
-alert(minDate(dates));
+//alert(minDate(dates));
+
+
+
